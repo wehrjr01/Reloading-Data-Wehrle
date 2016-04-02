@@ -87,10 +87,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add Components.Designer.vb">
-      <DependentUpon>Add Components.vb</DependentUpon>
+    <Compile Include="AddComponents.Designer.vb">
+      <DependentUpon>AddComponents.vb</DependentUpon>
     </Compile>
-    <Compile Include="Add Components.vb">
+    <Compile Include="AddComponents.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddLoad.Designer.vb">
@@ -129,11 +129,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReloadingDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReloadingDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Rifle.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Add Components.resx">
-      <DependentUpon>Add Components.vb</DependentUpon>
+    <EmbeddedResource Include="AddComponents.resx">
+      <DependentUpon>AddComponents.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddLoad.resx">
       <DependentUpon>AddLoad.vb</DependentUpon>
@@ -162,14 +167,25 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="ReloadingDataSet.xsc">
+      <DependentUpon>ReloadingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReloadingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReloadingDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReloadingDataSet.xss">
+      <DependentUpon>ReloadingDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CartridgeDataSet.mdf">
+    <Content Include="ReloadingData.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="CartridgeDataSet_log.ldf">
+    <Content Include="ReloadingData_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CartridgeDataSet.mdf</DependentUpon>
+      <DependentUpon>ReloadingData.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
